@@ -47,8 +47,9 @@
     border: 1px solid #cccccc;
     border-radius: 5px;
     width: 100%;
-    margin-bottom: 10px;
+    margin: 10px 0;
     transition: border-color 0.3s ease;
+    box-sizing: border-box;
   }
   input:focus {
     border-color: #3498db;
@@ -80,12 +81,6 @@
 <title>Measures of Central Tendency</title>
 </head>
 <body>
-<div class="definitions">
-    <h2>Definitions:</h2>
-    <p><strong>Mean:</strong> The mean is the average of all the numbers.</p>
-    <p><strong>Median:</strong> The median is the middle number when the numbers are in order.</p>
-    <p><strong>Mode:</strong> The mode is the number that appears most frequently.</p>
-</div>    
 <div id="container">
   <div class="calculator">
     <h1>Calculate Mean, Median, and Mode</h1>
@@ -94,6 +89,12 @@
     <button onclick="calculate()">Calculate</button>
     <div id="result"></div>
   </div>
+</div>
+<div class="definitions">
+  <h2>Definitions:</h2>
+  <p><strong>Mean:</strong> The mean is the average of all the numbers.</p>
+  <p><strong>Median:</strong> The median is the middle number when the numbers are in order.</p>
+  <p><strong>Mode:</strong> The mode is the number that appears most frequently.</p>
 </div>
 <script>
   function calculate() {
