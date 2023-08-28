@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exploratory Web Assignment</title>
+<style>
+  /* Embedded CSS styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  .highlight {
+    color: #f39c12;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Exploratory Web Assignment</h1>
+    <p>Welcome to the world of web programming!</p>
+  </header>
+  <div class="container">
+    <h2>HTML Tags</h2>
+    <p>This is a <strong>paragraph</strong> element. You can use <em>emphasized</em> text too.</p>
+    <ul>
+      <li>This is an unordered list item.</li>
+      <li>Here's another list item.</li>
+    </ul>
+    <ol>
+      <li>This is an ordered list item.</li>
+      <li>This is another ordered list item.</li>
+    </ol>
+    <a href="https://www.example.com">This is a link</a> to an example website.
+  </div>
+  <div class="container">
+    <h2>CSS Styles</h2>
+    <p>You can apply <span class="highlight">CSS styles</span> to HTML elements.</p>
+    <div class="colored-box">This box has a colored background.</div>
+  </div>
+  <div class="container">
+    <h2>JavaScript Interaction</h2>
+    <p>Click the button to change the background color of this container:</p>
+    <button id="changeColorButton">Change Color</button>
+  </div>
+  <script>
+    // Embedded JavaScript code
+    const button = document.getElementById('changeColorButton');
+    button.addEventListener('click', () => {
+      const containers = document.querySelectorAll('.container');
+      containers.forEach(container => {
+        const randomColor = getRandomColor();
+        container.style.backgroundColor = randomColor;
+      });
+    });
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>
